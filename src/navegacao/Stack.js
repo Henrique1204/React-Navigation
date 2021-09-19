@@ -11,7 +11,7 @@ const Stack = createStackNavigator();
 const StackNavigator = () => {
     return (
         <Stack.Navigator
-            initialRouteName="TelaC"
+            initialRouteName="TelaA"
             screenOptions={{ headerShown: false }}
         >
             <Stack.Screen
@@ -19,7 +19,7 @@ const StackNavigator = () => {
                 options={{ title: "Titulo da tela A" }}
             >
                 {(props) => (
-                    <PassoStack {...props} avancar="TelaC" voltar={true}>
+                    <PassoStack {...props} avancar="TelaB" voltar={true}>
                         <TelaA />
                     </PassoStack>
                 )}
@@ -30,7 +30,7 @@ const StackNavigator = () => {
                 options={{ title: "Titulo da tela B" }}
             >
                 {(props) => (
-                    <PassoStack {...props} avancar="TelaA" voltar={true}>
+                    <PassoStack {...props} avancar="TelaC" voltar={true}>
                         <TelaB />
                     </PassoStack>
                 )}
@@ -41,8 +41,8 @@ const StackNavigator = () => {
                 options={{ title: "Titulo da tela C" }}
             >
                 {(props) => (
-                    <PassoStack {...props} avancar="TelaB" voltar={true}>
-                        <TelaC />
+                    <PassoStack {...props} avancar="TelaA" voltar={true}>
+                        <TelaC {...props} />
                     </PassoStack>
                 )}
             </Stack.Screen>

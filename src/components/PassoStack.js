@@ -15,7 +15,9 @@ const PassoStack = ({ children, avancar, voltar, navigation }) => {
                 { avancar && navigation?.navigate && (
                     <Button
                         title="Avançar"
-                        onPress={() => navigation.navigate(avancar)}
+                        onPress={() => navigation.push(avancar, {
+                            numero: Math.round(Math.random() * 100)
+                        })}
                     />
                 ) }
             </View>
