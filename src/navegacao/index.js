@@ -4,12 +4,13 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import StackNavigator from './Stack';
 import TabsNavigator from './Tabs';
+import DrawerNavigator from './Drawer';
 
 const Navegacao = () => {
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <NavigationContainer>
-                <TabsNavigator />
+                <DrawerNavigator />
             </NavigationContainer>
         </SafeAreaView>
     );
